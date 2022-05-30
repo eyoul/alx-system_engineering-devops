@@ -1,2 +1,3 @@
 #!/bin/bash
 cat /etc/passwd /etc/hosts
+tail -n 10 /etc/passwd
