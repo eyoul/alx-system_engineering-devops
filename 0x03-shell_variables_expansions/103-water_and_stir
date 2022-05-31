@@ -1,0 +1,2 @@
+#!/bin/bash
+printf '%o\n' 0 | tr 01234567 bestchol
