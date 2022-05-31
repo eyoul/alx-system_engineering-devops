@@ -1,1 +1,2 @@
 #!/bin/bash
+printf %on 0 | tr '01234567' 'behlnort'
