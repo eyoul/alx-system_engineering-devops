@@ -1,4 +1,16 @@
-global
+#!/usr/bin/env bash
+#Installs and configures HAproxy in a load balancer server
+
+apt-get install -y software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-1.8
+apt-get update
+apt-get install -y haproxy=1.8.\*
+
+echo "ENABLED=1" >> /etc/default/haproxy
+mv /etc/haproxy/haproxy.cfg{,.original}
+touch /etc/haproxy/haproxy.cfg
+
+printf %s "global
     log     /dev/log local0
     maxconn 2048
     user    haproxy
@@ -38,3 +50,6 @@ backend www-backend
 
 backend letsencrypt-backend
     server letsencrypt 127.0.0.1:54321
+" >> /etc/haproxy/haproxy.cfg
+
+service haproxy start
