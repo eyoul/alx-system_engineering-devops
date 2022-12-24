@@ -35,7 +35,7 @@ defaults
 
 frontend web-frontend
         bind *:80
-  bind *:443 ssl crt /etc/haproxy/cert/www.umiintujuti.tech.pem
+  bind *:443 ssl crt /etc/haproxy/cert/www.eyoul.tech.pem
         mode http
         default_backend web-backend
 
