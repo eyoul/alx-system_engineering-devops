@@ -56,7 +56,7 @@ frontend www-frontend
     default_backend www-backend
 
 frontend www-https-frontend
-    bind *:443 ssl crt /etc/haproxy/certs/bennettdixon.online.pem
+    bind *:443 ssl crt /etc/haproxy/certs/www.eyoul.tech.pem
     reqadd X-Forwarded-Proto:\ https
     default_backend www-backend
 
