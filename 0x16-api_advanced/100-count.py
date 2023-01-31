@@ -2,7 +2,7 @@
 """ Count it! """
 from requests import get
 
-REDDIT = "https://www.reddit.com/dev/api/"
+REDDIT = "https://www.reddit.com/"
 HEADERS = {'user-agent': 'esw1229/0.0.1'}
 
 
