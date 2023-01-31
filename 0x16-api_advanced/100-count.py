@@ -6,7 +6,7 @@ import requests
 
 def count_words(subreddit, word_list, found_list=[], after=None):
     '''return count of keywords in hot posts titles'''
-    user_agent = {'User-agent': 'test45'}
+    user_agent = {'User-agent': 'esw1229'}
     posts = requests.get('http://www.reddit.com/r/{}/hot.json?after={}'
                          .format(subreddit, after), headers=user_agent)
     if after is None:
